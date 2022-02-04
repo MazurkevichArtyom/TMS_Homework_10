@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ek4-Fu-FfS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HW10" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaT-2e-4eo">
+                                <rect key="frame" x="136" y="432.5" width="142" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Swipe circle game">
+                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onSwipeCircleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="05F-bo-6PC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bX8-qG-yJ3">
+                                <rect key="frame" x="139.5" y="487.5" width="135" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Pan circcle game">
+                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onPanCircleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OlE-xB-U4z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tag-nJ-Qjo">
+                                <rect key="frame" x="144" y="377.5" width="126" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Tap circle game">
+                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onTapCircleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K0a-cO-45Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tag-nJ-Qjo" firstAttribute="centerX" secondItem="BaT-2e-4eo" secondAttribute="centerX" id="6eY-28-0D2"/>
+                            <constraint firstItem="BaT-2e-4eo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HXu-A5-53P"/>
+                            <constraint firstItem="BaT-2e-4eo" firstAttribute="top" secondItem="tag-nJ-Qjo" secondAttribute="bottom" constant="24" id="Skl-TY-LLw"/>
+                            <constraint firstItem="bX8-qG-yJ3" firstAttribute="top" secondItem="BaT-2e-4eo" secondAttribute="bottom" constant="24" id="ZjC-mR-Zwz"/>
+                            <constraint firstItem="BaT-2e-4eo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kb8-s1-qRO"/>
+                            <constraint firstItem="bX8-qG-yJ3" firstAttribute="centerX" secondItem="BaT-2e-4eo" secondAttribute="centerX" id="ktN-Zb-eJA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0MW-dI-DHc"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="948" y="183"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Yhi-rT-rZr">
+            <objects>
+                <navigationController id="ek4-Fu-FfS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jy7-Zn-327">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8oy-d3-bMk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fYJ-TX-R4E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="184"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
